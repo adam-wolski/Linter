@@ -4,6 +4,9 @@
 #include "CoreMinimal.h"
 #include "LintRule.generated.h"
 
+class ULintRuleSet;
+class ULintRule;
+
 UENUM(BlueprintType)
 enum class ELintRuleSeverity : uint8
 {

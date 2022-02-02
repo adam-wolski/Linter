@@ -103,9 +103,9 @@ TSharedRef<SDockTab> FLinterModule::SpawnTab(const FSpawnTabArgs& TabSpawnArgs, 
 
 	const TSharedRef<SDockTab> MajorTab =
 		SNew(SDockTab)
-		.Icon(IconBrush)
 		.TabRole(ETabRole::MajorTab);
 
+	MajorTab->SetTabIcon(IconBrush);
 	MajorTab->SetContent(SNew(SLintWizard));
 
 	return MajorTab;

@@ -8,6 +8,7 @@
 #include "UnrealEdMisc.h"
 #include "ContentBrowserModule.h"
 #include "EditorStyleSet.h"
+#include "Linter.h"
 #include "Framework/MultiBox/MultiBoxExtender.h"
 #include "Framework/Commands/UIAction.h"
 #include "Delegates/IDelegateInstance.h"
@@ -50,7 +51,7 @@ void FLinterContentBrowserExtensions::InstallHooks(FLinterModule* LinterModule, 
 							{
 								lm->SetDesiredLintPaths(SelectedPaths);
 							}
-							FGlobalTabmanager::Get()->InvokeTab(FName("LinterTab"));
+							FGlobalTabmanager::Get()->TryInvokeTab(FName("LinterTab"));
 						}
 					})),
 					NAME_None,

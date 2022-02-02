@@ -7,6 +7,6 @@
 class FLinterContentBrowserExtensions
 {
 public:
-	static void InstallHooks(FLinterModule* LinterModule, class FDelegateHandle* pContentBrowserExtenderDelegateHandle, class FDelegateHandle* pAssetExtenderDelegateHandle);
-	static void RemoveHooks(FLinterModule* LinterModule, class FDelegateHandle* pContentBrowserExtenderDelegateHandle, class FDelegateHandle* pAssetExtenderDelegateHandle);
+	static void InstallHooks(class FLinterModule* LinterModule, class FDelegateHandle* pContentBrowserExtenderDelegateHandle, class FDelegateHandle* pAssetExtenderDelegateHandle);
+	static void RemoveHooks(class FLinterModule* LinterModule, class FDelegateHandle* pContentBrowserExtenderDelegateHandle, class FDelegateHandle* pAssetExtenderDelegateHandle);
 };

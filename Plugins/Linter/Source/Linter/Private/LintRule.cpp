@@ -5,9 +5,7 @@
 #include "Materials/Material.h"
 #include "Kismet2/BlueprintEditorUtils.h"
 #include "Engine/Blueprint.h"
-#include "AssetData.h"
 #include "Modules/ModuleManager.h"
-#include "IAssetRegistry.h"
 #include "IAssetTools.h"
 #include "AssetRegistryModule.h"
 
@@ -61,7 +59,7 @@ FName ULintRule::GetRuleBasedObjectVariantName_Implementation(UObject* ObjectToL
 		UMaterialInterface* MI = Cast<UMaterialInterface>(ObjectToLint);
 		if (MI != nullptr)
 		{
-#if ENGINE_MINOR_VERSION >= 25
+#if ENGINE_MAJOR_VERSION >= 5 || ENGINE_MINOR_VERSION >= 25
 			TMicRecursionGuard RecursionGuard;
 #else
 			UMaterialInterface::TMicRecursionGuard RecursionGuard;

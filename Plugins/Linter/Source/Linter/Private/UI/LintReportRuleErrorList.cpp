@@ -42,3 +42,5 @@ void SLintReportRuleErrorList::Construct(const FArguments& Args)
 		})
 	];
 }
+
+#undef LOCTEXT_NAMESPACE  // "LintReport"
